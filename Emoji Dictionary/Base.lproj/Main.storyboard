@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gbH-Kg-2fT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="646"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gbH-Kg-2fT" secondAttribute="trailing" id="0sF-f3-0it"/>
+                            <constraint firstItem="gbH-Kg-2fT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RVi-Ty-QgU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gbH-Kg-2fT" secondAttribute="bottom" id="UJq-mf-FCa"/>
+                            <constraint firstItem="gbH-Kg-2fT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dN6-yf-RSD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gbH-Kg-2fT" secondAttribute="bottom" constant="1" id="yBw-h4-kpS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emojiTableView" destination="gbH-Kg-2fT" id="fI6-J4-n85"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Tgl-Vg-NIy">
+            <objects>
+                <viewController id="ozp-wp-tqk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wup-d6-tvR"/>
+                        <viewControllerLayoutGuide type="bottom" id="sXa-D0-hxH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ycH-tT-szR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🕍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua7-Jr-1b4">
+                                <rect key="frame" x="34" y="60" width="308" height="338"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="283"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely Synagogue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOR-Ex-MoA">
+                                <rect key="frame" x="23" y="448" width="329" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fOR-Ex-MoA" firstAttribute="top" secondItem="Ua7-Jr-1b4" secondAttribute="bottom" constant="50" id="O5P-U9-mNg"/>
+                            <constraint firstItem="fOR-Ex-MoA" firstAttribute="centerX" secondItem="ycH-tT-szR" secondAttribute="centerX" id="fGc-05-IYN"/>
+                            <constraint firstItem="Ua7-Jr-1b4" firstAttribute="centerX" secondItem="ycH-tT-szR" secondAttribute="centerX" id="z0h-ja-TXC"/>
+                            <constraint firstItem="Ua7-Jr-1b4" firstAttribute="top" secondItem="Wup-d6-tvR" secondAttribute="bottom" constant="40" id="zzI-3B-lhF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALW-Mh-mKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706.39999999999998" y="43.628185907046479"/>
         </scene>
     </scenes>
 </document>
